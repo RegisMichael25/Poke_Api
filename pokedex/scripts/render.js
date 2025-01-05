@@ -25,7 +25,7 @@ function renderPokemon(pokemon){
         <div class="screen">
           <div class="pokemon-info">
             <h2 id="pokemon-name">${pokemon.name}</h2>
-            <img id="pokemon-image" src="${pokemon.sprites.front_default}" alt="Pokémon" class="pokemon-img">
+            <img id="pokemon-image" src="${pokemon['sprites']['versions']['generation-v']['black-white']['animated']['front_default']}" alt="Pokémon" class="pokemon-img">
             <ol class="pokemon-type type-color" style="background-color: ${typeColors.find((type) => type.type === pokemon.types[0].type.name).color}">
                 ${pokemon.types.map((type) =>`${(type.type.name)}`).join(' ')}
             </ol>
@@ -43,3 +43,4 @@ function renderPokemon(pokemon){
 `
 }
 
+// 
