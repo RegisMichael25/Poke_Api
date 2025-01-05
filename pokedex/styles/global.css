@@ -19,7 +19,7 @@ body {
   /* Container da Pokédex */
   .pokedex {
     width: 300px;
-    height: 500px;
+    height: fit-content;
     background: linear-gradient(145deg, #e63946, #f77f00);
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -67,8 +67,22 @@ body {
     color: #555;
   }
 
-  #pokemon-type {
+  .pokemon-type {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+  }
+
+  #pokemon-stats {
+    list-style: none;
+  }
+
+  #pokemon-stats li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
   }
   
   /* Controles */
