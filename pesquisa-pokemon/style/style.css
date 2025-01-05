@@ -1,0 +1,116 @@
+/* Variáveis de cores */
+:root {
+    --primary-red: #ff0000;
+    --primary-white: #ffffff;
+    --primary-black: #000000;
+    --primary-yellow: #ffcc00;
+    --background-gray: #f4f4f4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-gray);
+    color: var(--primary-black);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do formulário */
+.form {
+    background: var(--primary-white);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.input-pokemon {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid var(--primary-black);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form button {
+    background-color: var(--primary-red);
+    color: var(--primary-white);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background-color: var(--primary-yellow);
+}
+
+/* Estilo da exibição do Pokémon */
+div {
+    background: var(--primary-white);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.id {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+.pkm-img {
+    width: 150px;
+    height: 150px;
+    margin: 15px auto;
+    display: block;
+    border: 2px solid var(--primary-black);
+    border-radius: 50%;
+    background-color: var(--background-gray);
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+p span {
+    font-weight: bold;
+    color: var(--primary-black);
+}
+
+.tipo {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+
+.main-container{
+    display: none;
+}
