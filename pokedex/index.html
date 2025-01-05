@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="styles/global.css">
 </head>
 <body>
-    
-    <header>
-        <h1 id="titulo">Pokedex</h1>
-    </header>
-
+    <div class="pokedex" id="pokedex">
+        <div class="screen">
+          <div class="pokemon-info">
+            <h2 id="pokemon-name">Loading...</h2>
+            <img id="pokemon-image" src="" alt="Pokémon" class="pokemon-img">
+            <p id="pokemon-type">Type: Loading...</p>
+          </div>
+        </div>
+        <div class="controls">
+            <button id="prev-button" onclick="previousPokemon()">Previous</button>
+            <button id="next-button" onclick="nextPokemon()">Next</button>
+        </div>
+    </div>
     <script src="scripts/main.js"></script>
     <script src="scripts/pokeapi.js"></script>
+    <script src="scripts/render.js"></script>
 </body>
 </html>

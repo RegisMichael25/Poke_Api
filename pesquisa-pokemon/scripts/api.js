@@ -36,7 +36,7 @@ const fetchPokemon = async (pokemon) => {
 };
 
 const captPkm = async (data) => {
-    mainContainer.innerHTML = ''; // Limpa o container principal
+    mainContainer.innerHTML = ''; 
 
     const container = document.createElement('div');
     container.className = "conteiner-principal";
@@ -47,11 +47,11 @@ const captPkm = async (data) => {
         <p>Tipo: <span class="tipo">${await typesPokemon(data)}</span></p>
     `;
 
-    // Adiciona o container ao DOM
+    
     mainContainer.appendChild(container);
     mainContainer.style.display = 'block';
 
-    // Define a cor de fundo do elemento "tipo"
+   
     const tipoElement = container.querySelector('.tipo');
     const color = data.types[0].type.name.toLowerCase();
     if (typeColors[color]) {
@@ -66,12 +66,12 @@ async function typesPokemon(data) {
     for (let i = 0; i < data.types.length; i++) {
         typeList.push(data.types[i].type.name);
     }
-    return typeList.join(', '); // Junta os tipos com vírgula
+    return typeList.join(', '); 
 }
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const pokemon = inputPkm.value.trim().toLowerCase(); // Remove espaços e transforma em minúsculas
+    const pokemon = inputPkm.value.trim().toLowerCase(); 
     if (pokemon) {
         fetchPokemon(pokemon);
     }

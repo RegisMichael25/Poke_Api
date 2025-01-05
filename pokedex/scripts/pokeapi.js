@@ -1,14 +1,19 @@
-const offset = 0;
-let limit = 3;
-
-fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
+async function getPokemon(endPoint) {
+await fetch(`https://pokeapi.co/api/v2/pokemon/${endPoint}`)
 .then((response) => response.json())
-.then((pokemons) => pokemons.results)
-.then((pokemonsBody) => {
-    let listPokemons = [pokemonsBody]
-    const pokemonsCapth = listPokemons.map((pokemon) => {
-        `
-            
-        `
-    })
+.then((responseBody) => {
+    console.log(responseBody);
+    
+    renderPokemon(responseBody);
 })
+.catch((error) => console.error('Error:', error));
+}
+
+// async function getPokemon(endPoint) {
+//     const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${endPoint}`);
+//     const pokemonResponse = await pokemon.json();
+//     console.log(pokemonResponse);
+//     showPokemon(pokemonResponse);
+// }
+
+
